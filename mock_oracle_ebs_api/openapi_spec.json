@@ -1,0 +1,1028 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Oracle EBS Leave Assistant API",
+    "description": "RESTful Mock APIs for Oracle E-Business Suite Leave Management System",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "System"
+        ],
+        "summary": "Health Check",
+        "operationId": "health_check_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/employees/{employee_id}": {
+      "get": {
+        "tags": [
+          "Employees"
+        ],
+        "summary": "Get Employee Profile",
+        "operationId": "get_employee_profile_api_v1_employees__employee_id__get",
+        "parameters": [
+          {
+            "name": "employee_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Employee Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/employees/{employee_id}/balances": {
+      "get": {
+        "tags": [
+          "Leave Balances"
+        ],
+        "summary": "Get Leave Balances",
+        "operationId": "get_leave_balances_api_v1_employees__employee_id__balances_get",
+        "parameters": [
+          {
+            "name": "employee_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Employee Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/policies": {
+      "get": {
+        "tags": [
+          "Policies"
+        ],
+        "summary": "List All Policies",
+        "operationId": "list_all_policies_api_v1_policies_get",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/policies/{leave_type}": {
+      "get": {
+        "tags": [
+          "Policies"
+        ],
+        "summary": "Get Policy By Type",
+        "operationId": "get_policy_by_type_api_v1_policies__leave_type__get",
+        "parameters": [
+          {
+            "name": "leave_type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Leave Type"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaves/check-overlap": {
+      "post": {
+        "tags": [
+          "Schedules & Approvals"
+        ],
+        "summary": "Check Team Overlap",
+        "operationId": "check_team_overlap_api_v1_leaves_check_overlap_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OverlapCheckRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OverlapCheckResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaves/analyze-document": {
+      "post": {
+        "tags": [
+          "Document Intelligence"
+        ],
+        "summary": "Analyze Supporting Document",
+        "operationId": "analyze_supporting_document_api_v1_leaves_analyze_document_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DocumentAnalysisRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentAnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaves/submit": {
+      "post": {
+        "tags": [
+          "Leave Requests"
+        ],
+        "summary": "Submit Leave Request",
+        "operationId": "submit_leave_request_api_v1_leaves_submit_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LeaveSubmissionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeaveSubmissionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaves/{request_id}/status": {
+      "get": {
+        "tags": [
+          "Leave Requests"
+        ],
+        "summary": "Get Leave Status",
+        "operationId": "get_leave_status_api_v1_leaves__request_id__status_get",
+        "parameters": [
+          {
+            "name": "request_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Request Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaves/{request_id}/action": {
+      "post": {
+        "tags": [
+          "Schedules & Approvals"
+        ],
+        "summary": "Take Approval Action",
+        "operationId": "take_approval_action_api_v1_leaves__request_id__action_post",
+        "parameters": [
+          {
+            "name": "request_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Request Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApprovalActionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApprovalActionRequest": {
+        "properties": {
+          "approver_id": {
+            "type": "string",
+            "title": "Approver Id",
+            "examples": [
+              "MGR201"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "title": "Action",
+            "description": "'APPROVE' or 'REJECT'",
+            "examples": [
+              "APPROVE"
+            ]
+          },
+          "comments": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Comments",
+            "examples": [
+              "Approved based on valid medical certificate and coverage arranged."
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "approver_id",
+          "action"
+        ],
+        "title": "ApprovalActionRequest"
+      },
+      "DocumentAnalysisRequest": {
+        "properties": {
+          "employee_id": {
+            "type": "string",
+            "title": "Employee Id",
+            "examples": [
+              "EMP101"
+            ]
+          },
+          "leave_type": {
+            "$ref": "#/components/schemas/LeaveTypeEnum",
+            "examples": [
+              "SICK_LEAVE"
+            ]
+          },
+          "start_date": {
+            "type": "string",
+            "title": "Start Date",
+            "examples": [
+              "2026-10-14"
+            ]
+          },
+          "end_date": {
+            "type": "string",
+            "title": "End Date",
+            "examples": [
+              "2026-10-16"
+            ]
+          },
+          "duration_days": {
+            "type": "number",
+            "title": "Duration Days",
+            "examples": [
+              3.0
+            ]
+          },
+          "attachment_name": {
+            "type": "string",
+            "title": "Attachment Name",
+            "examples": [
+              "medical_certificate.txt"
+            ]
+          },
+          "attachment_base64": {
+            "type": "string",
+            "title": "Attachment Base64",
+            "description": "Base64 encoded string of supporting document"
+          }
+        },
+        "type": "object",
+        "required": [
+          "employee_id",
+          "leave_type",
+          "start_date",
+          "end_date",
+          "duration_days",
+          "attachment_name",
+          "attachment_base64"
+        ],
+        "title": "DocumentAnalysisRequest"
+      },
+      "DocumentAnalysisResponse": {
+        "properties": {
+          "document_type": {
+            "type": "string",
+            "title": "Document Type"
+          },
+          "is_advisory_only": {
+            "type": "boolean",
+            "title": "Is Advisory Only"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer"
+          },
+          "recommendation": {
+            "type": "string",
+            "title": "Recommendation",
+            "examples": [
+              "RECOMMEND_APPROVAL"
+            ]
+          },
+          "confidence_score": {
+            "type": "number",
+            "title": "Confidence Score",
+            "examples": [
+              0.98
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "title": "Rationale"
+          },
+          "extracted_entities": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Extracted Entities"
+          },
+          "validations": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Validations"
+          },
+          "missing_or_inconsistent_info": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Missing Or Inconsistent Info"
+          },
+          "analyzed_at": {
+            "type": "string",
+            "title": "Analyzed At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_type",
+          "is_advisory_only",
+          "disclaimer",
+          "recommendation",
+          "confidence_score",
+          "rationale",
+          "extracted_entities",
+          "validations",
+          "missing_or_inconsistent_info",
+          "analyzed_at"
+        ],
+        "title": "DocumentAnalysisResponse"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "LeaveSubmissionRequest": {
+        "properties": {
+          "employee_id": {
+            "type": "string",
+            "title": "Employee Id",
+            "examples": [
+              "EMP101"
+            ]
+          },
+          "leave_type": {
+            "$ref": "#/components/schemas/LeaveTypeEnum",
+            "examples": [
+              "SICK_LEAVE"
+            ]
+          },
+          "start_date": {
+            "type": "string",
+            "title": "Start Date",
+            "examples": [
+              "2026-10-14"
+            ]
+          },
+          "end_date": {
+            "type": "string",
+            "title": "End Date",
+            "examples": [
+              "2026-10-16"
+            ]
+          },
+          "duration_days": {
+            "type": "number",
+            "title": "Duration Days",
+            "examples": [
+              3.0
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason",
+            "examples": [
+              "Acute viral infection and bed rest prescribed by doctor"
+            ]
+          },
+          "attachment_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attachment Name",
+            "examples": [
+              "medical_cert.txt"
+            ]
+          },
+          "attachment_base64": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Attachment Base64",
+            "description": "Base64 encoded file attachment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "employee_id",
+          "leave_type",
+          "start_date",
+          "end_date",
+          "duration_days",
+          "reason"
+        ],
+        "title": "LeaveSubmissionRequest"
+      },
+      "LeaveSubmissionResponse": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "title": "Success"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "transaction_status": {
+            "type": "string",
+            "title": "Transaction Status"
+          },
+          "employee_id": {
+            "type": "string",
+            "title": "Employee Id"
+          },
+          "employee_name": {
+            "type": "string",
+            "title": "Employee Name"
+          },
+          "leave_type": {
+            "type": "string",
+            "title": "Leave Type"
+          },
+          "start_date": {
+            "type": "string",
+            "title": "Start Date"
+          },
+          "end_date": {
+            "type": "string",
+            "title": "End Date"
+          },
+          "duration_days": {
+            "type": "number",
+            "title": "Duration Days"
+          },
+          "routing_to_approver": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Routing To Approver"
+          },
+          "ai_advisory": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ai Advisory"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "success",
+          "request_id",
+          "transaction_status",
+          "employee_id",
+          "employee_name",
+          "leave_type",
+          "start_date",
+          "end_date",
+          "duration_days",
+          "routing_to_approver",
+          "message"
+        ],
+        "title": "LeaveSubmissionResponse"
+      },
+      "LeaveTypeEnum": {
+        "type": "string",
+        "enum": [
+          "ANNUAL_LEAVE",
+          "SICK_LEAVE",
+          "MATERNITY_LEAVE",
+          "BEREAVEMENT_LEAVE",
+          "UNPAID_LEAVE"
+        ],
+        "title": "LeaveTypeEnum"
+      },
+      "OverlapCheckRequest": {
+        "properties": {
+          "employee_id": {
+            "type": "string",
+            "title": "Employee Id",
+            "description": "Employee requesting leave",
+            "examples": [
+              "EMP101"
+            ]
+          },
+          "start_date": {
+            "type": "string",
+            "title": "Start Date",
+            "description": "Start date (YYYY-MM-DD)",
+            "examples": [
+              "2026-10-15"
+            ]
+          },
+          "end_date": {
+            "type": "string",
+            "title": "End Date",
+            "description": "End date (YYYY-MM-DD)",
+            "examples": [
+              "2026-10-18"
+            ]
+          },
+          "department": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Department",
+            "description": "Department to check overlap against",
+            "examples": [
+              "Engineering"
+            ]
+          }
+        },
+        "type": "object",
+        "required": [
+          "employee_id",
+          "start_date",
+          "end_date"
+        ],
+        "title": "OverlapCheckRequest"
+      },
+      "OverlapCheckResponse": {
+        "properties": {
+          "has_overlap": {
+            "type": "boolean",
+            "title": "Has Overlap"
+          },
+          "overlapping_team_members": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Overlapping Team Members"
+          },
+          "warning_message": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Warning Message"
+          },
+          "can_proceed": {
+            "type": "boolean",
+            "title": "Can Proceed",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "has_overlap",
+          "overlapping_team_members"
+        ],
+        "title": "OverlapCheckResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

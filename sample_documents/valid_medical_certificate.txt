@@ -1,0 +1,31 @@
+================================================================================
+                    EMIRATES ADVANCED HEALTHCARE CLINIC
+                    Official Medical Certificate & Rest Note
+                    License: DHA-MED-2024-99812
+================================================================================
+
+Date of Issue: 2026-10-14
+Patient Name: Thirupathi Kumar
+Employee ID: EMP101
+Date of Birth: 1994-08-20
+
+CLINICAL ASSESSMENT & DIAGNOSIS:
+The above patient was examined in outpatient consultation on 2026-10-14.
+Diagnosis: Acute Viral Gastroenteritis and Upper Respiratory Tract Infection.
+Patient presented with acute dehydration, fever (38.8 C), and bodily fatigue.
+
+RECOMMENDED MEDICAL REST:
+The patient is medically unfit for work duties and is advised complete bed rest.
+Recommended Rest Period:
+Start Date: 2026-10-14
+End Date:   2026-10-16
+Total Duration: 3 consecutive days of medical rest.
+
+ATTENDING MEDICAL PRACTITIONER:
+Doctor Name: Dr. Robert Langdon, MD (Internal Medicine)
+Medical Council Reg #: GMC-49821
+Clinic Name: Emirates Advanced Healthcare Clinic, Downtown Medical Tower, Dubai, UAE
+
+Status: VERIFIED & OFFICIALLY SIGNED
+[Doctor's Stamp & Electronic Signature Applied]
+================================================================================
